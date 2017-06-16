@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'gs-rest-service'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile group: 'io.spring.platform', name: 'platform', version: '2.0.8.RELEASE'
+    compile group: 'com.zaxxer', name: 'HikariCP', version: '2.6.2'
+
+    compile group: 'com.h2database', name: 'h2', version: '1.4.196'
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+
+}
+
