@@ -5,6 +5,7 @@ import avenuecode.model.OrderLineItem;
 import avenuecode.model.Product;
 import avenuecode.repo.OrderRepository;
 import avenuecode.repo.ProductRepository;
+import avenuecode.request.OrderLineItemRequest;
 import avenuecode.request.PlaceOrderRequest;
 import avenuecode.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,7 @@ public class OrdersServiceImpl implements OrdersService {
             throw new IllegalArgumentException("order requires at least 1 line item");
         }
 
-        for (PlaceOrderRequest.OrderLineItemRequest lineItem: request.getLineItems()) {
+        for (OrderLineItemRequest lineItem: request.getLineItems()) {
 
             if(lineItem.getAmount() < 1){
                 throw new IllegalArgumentException("line items must contain an amount greater than 0");

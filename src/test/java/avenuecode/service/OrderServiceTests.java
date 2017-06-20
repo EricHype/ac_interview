@@ -1,6 +1,7 @@
 package avenuecode.service;
 
 import avenuecode.model.Order;
+import avenuecode.request.OrderLineItemRequest;
 import avenuecode.request.PlaceOrderRequest;
 import org.junit.Assert;
 import org.junit.Rule;
@@ -8,8 +9,6 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -48,8 +47,8 @@ public class OrderServiceTests {
     public void shouldThrowExceptionPlacingOrderWithLineItemsWithBadAmount() {
         PlaceOrderRequest request = new PlaceOrderRequest();
         request.setDestination("Test House - 234 Anywhere st");
-        PlaceOrderRequest.OrderLineItemRequest lineItemRequest =
-                new PlaceOrderRequest.OrderLineItemRequest();
+        OrderLineItemRequest lineItemRequest =
+                new OrderLineItemRequest();
         lineItemRequest.setAmount(-1);
         expectedException.expect(IllegalArgumentException.class);
         expectedException.expectMessage("order requires at least 1 line item");
@@ -60,8 +59,8 @@ public class OrderServiceTests {
     public void shouldThrowExceptionPlacingOrderWithBadProductId() {
         PlaceOrderRequest request = new PlaceOrderRequest();
         request.setDestination("Test House - 234 Anywhere st");
-        PlaceOrderRequest.OrderLineItemRequest lineItemRequest =
-                new PlaceOrderRequest.OrderLineItemRequest();
+        OrderLineItemRequest lineItemRequest =
+                new OrderLineItemRequest();
         lineItemRequest.setAmount(1);
         lineItemRequest.setProductId(999);
         request.getLineItems().add(lineItemRequest);
@@ -74,8 +73,8 @@ public class OrderServiceTests {
     public void shouldPlaceAnOrderWhenRequestIsValid(){
         PlaceOrderRequest request = new PlaceOrderRequest();
         request.setDestination("Test House - 234 Anywhere st");
-        PlaceOrderRequest.OrderLineItemRequest lineItemRequest =
-                new PlaceOrderRequest.OrderLineItemRequest();
+        OrderLineItemRequest lineItemRequest =
+                new OrderLineItemRequest();
         lineItemRequest.setAmount(1);
         lineItemRequest.setProductId(2);
         request.getLineItems().add(lineItemRequest);

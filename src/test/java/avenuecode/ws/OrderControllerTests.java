@@ -1,6 +1,7 @@
 package avenuecode.ws;
 
 import avenuecode.model.Order;
+import avenuecode.request.OrderLineItemRequest;
 import avenuecode.request.PlaceOrderRequest;
 import org.junit.Assert;
 import org.junit.Test;
@@ -36,8 +37,8 @@ public class OrderControllerTests {
     public void shouldPlaceOrderWhenRequestIsValid(){
         PlaceOrderRequest request = new PlaceOrderRequest();
         request.setDestination("224 Integration street");
-        PlaceOrderRequest.OrderLineItemRequest lineItemRequest =
-                new PlaceOrderRequest.OrderLineItemRequest();
+        OrderLineItemRequest lineItemRequest =
+                new OrderLineItemRequest();
         lineItemRequest.setAmount(1);
         lineItemRequest.setProductId(2);
         request.getLineItems().add(lineItemRequest);
