@@ -3,6 +3,7 @@ package avenuecode;
 import avenuecode.model.Order;
 import avenuecode.model.OrderLineItem;
 import avenuecode.model.Product;
+import avenuecode.service.OrdersService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,9 @@ public class Application implements CommandLineRunner {
     @Autowired
     ProductRepository productRepository;
 
+    @Autowired
+    OrdersService ordersService;
+
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
@@ -49,8 +53,8 @@ public class Application implements CommandLineRunner {
 
         Order o = new Order();
         o.setDestination("My house - 123 Anywhere st");
-        o.getOrderLineItems().add(new OrderLineItem(p1, 100));
-        o.getOrderLineItems().add(new OrderLineItem(p2, 200));
+        o.getOrderLineItems().add(new OrderLineItem(p1, 100, o));
+        o.getOrderLineItems().add(new OrderLineItem(p2, 200, o));
 
         orderRepository.save(o);
 

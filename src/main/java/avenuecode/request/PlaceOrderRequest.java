@@ -1,5 +1,8 @@
 package avenuecode.request;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,9 +28,27 @@ public class PlaceOrderRequest {
         this.lineItems = lineItems;
     }
 
+    public PlaceOrderRequest(){
+        lineItems = new ArrayList<>();
+    }
+
+    public PlaceOrderRequest(@JsonProperty("destination") String destination,
+                             @JsonProperty("lineItems") List<OrderLineItemRequest> lineItems){
+        this.destination = destination;
+        this.lineItems = lineItems;
+    }
+
     public static class OrderLineItemRequest{
         Integer productId;
         Integer amount;
+
+        public OrderLineItemRequest() {}
+
+        public OrderLineItemRequest(@JsonProperty("productId") Integer productId,
+                                    @JsonProperty("amount") Integer amount){
+            this.productId = productId;
+            this.amount = amount;
+        }
 
         public Integer getProductId() {
             return productId;

@@ -3,6 +3,7 @@ package avenuecode.model;
 import com.fasterxml.jackson.annotation.JsonGetter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,6 +21,10 @@ public class Order {
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     List<OrderLineItem> orderLineItems;
+
+    public Order() {
+        orderLineItems = new ArrayList<>();
+    }
 
     public Integer getId() {
         return id;

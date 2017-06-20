@@ -8,10 +8,12 @@ import avenuecode.repo.ProductRepository;
 import avenuecode.request.PlaceOrderRequest;
 import avenuecode.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by eheitmuller on 6/18/17.
  */
+@Service
 public class OrdersServiceImpl implements OrdersService {
 
     @Autowired
@@ -46,7 +48,7 @@ public class OrdersServiceImpl implements OrdersService {
                 throw new IllegalArgumentException(lineItem.getProductId() + " is not a valid product id");
             }
 
-            order.getOrderLineItems().add(new OrderLineItem(p, lineItem.getAmount()));
+            order.getOrderLineItems().add(new OrderLineItem(p, lineItem.getAmount(), order));
         }
 
         return orderRepository.save(order);

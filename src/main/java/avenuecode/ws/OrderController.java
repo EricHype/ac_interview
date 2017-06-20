@@ -5,9 +5,11 @@ import avenuecode.repo.OrderRepository;
 import avenuecode.request.PlaceOrderRequest;
 import avenuecode.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.websocket.server.PathParam;
@@ -32,19 +34,19 @@ public class OrderController {
     OrderRepository orderRepository;
 
     @RequestMapping(value = "/order", method = RequestMethod.POST)
-    Order createOrder(@RequestBody PlaceOrderRequest orderRequest){
+    public @ResponseBody Order createOrder(@RequestBody PlaceOrderRequest orderRequest){
         Order o = ordersService.placeOrder(orderRequest);
         return o;
     }
 
     @RequestMapping(value="/order/{id}", method = RequestMethod.GET)
-    Order getOrder(@PathParam("id") Integer id){
+    public @ResponseBody Order getOrder(@PathParam("id") Integer id){
         Order o = orderRepository.findOne(id);
         return o;
     }
 
     @RequestMapping(value="/order/{id}", method = RequestMethod.PUT)
-    Order updateOrder(@RequestBody Order order){
+    public @ResponseBody Order updateOrder(@RequestBody Order order){
         Order o = orderRepository.findOne(order.getId());
 
         if(null == o){
@@ -53,12 +55,13 @@ public class OrderController {
 
         o.setDestination(order.getDestination());
         o.setOrderLineItems(order.getOrderLineItems());
+
         return orderRepository.save(o);
     }
 
 
     @RequestMapping(value="/orders", method = RequestMethod.GET)
-    List<Order> getAllOrders(){
+    public @ResponseBody List<Order> getAllOrders(){
         List<Order> orders = orderRepository.findAll();
         return orders;
     }

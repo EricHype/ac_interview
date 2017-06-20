@@ -27,16 +27,32 @@ public class OrderLineItem {
     @JoinColumn(name = "order_id")
     Order order;
 
-    public OrderLineItem(Product product, Integer amount) {
+    public OrderLineItem(){
+
+    }
+
+    public OrderLineItem(Product product, Integer amount, Order order) {
         this.product = product;
         this.amount = amount;
+        this.order = order;
     }
 
     public Integer getAmount() {
         return amount;
     }
 
+    public Integer getProductId(){
+        return product.id;
+    }
+
+    public Double getProductPrice(){
+        return product.price;
+    }
+
     public void setAmount(Integer amount) {
         this.amount = amount;
     }
+
+
+
 }
