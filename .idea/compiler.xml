@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="ac_interview_main" target="1.8" />
+      <module name="ac_interview_test" target="1.8" />
       <module name="AvenueCode_main" target="1.8" />
       <module name="AvenueCode_test" target="1.8" />
     </bytecodeTargetLevel>

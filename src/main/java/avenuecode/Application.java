@@ -1,5 +1,7 @@
 package avenuecode;
 
+import avenuecode.model.Order;
+import avenuecode.model.OrderLineItem;
 import avenuecode.model.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,6 +36,7 @@ public class Application implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Product p1 = new Product("Product1", 1.00);
         Product p2 = new Product("Product2", 2.00);
+        Product p3 = new Product("Product3", 3.00);
 
         productRepository.save(p1);
         productRepository.save(p2);
@@ -43,6 +46,14 @@ public class Application implements CommandLineRunner {
         for(Product p : products){
             logger.info(p.getName() + " " + p.getId());
         }
+
+        Order o = new Order();
+        o.setDestination("My house - 123 Anywhere st");
+        o.getOrderLineItems().add(new OrderLineItem(p1, 100));
+        o.getOrderLineItems().add(new OrderLineItem(p2, 200));
+
+        orderRepository.save(o);
+
     }
 }
 
