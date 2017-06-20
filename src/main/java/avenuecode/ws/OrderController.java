@@ -33,7 +33,8 @@ public class OrderController {
     @Autowired
     OrderRepository orderRepository;
 
-    @RequestMapping(value = "/order", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/order", method = RequestMethod.POST,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody Order createOrder(@RequestBody PlaceOrderRequest orderRequest){
         Order o = ordersService.placeOrder(orderRequest);
         return o;

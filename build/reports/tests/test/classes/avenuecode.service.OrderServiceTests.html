@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class avenuecode.service.OrderServiceTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class avenuecode.service.OrderServiceTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/avenuecode.service.html">avenuecode.service</a> &gt; OrderServiceTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.104s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">shouldPlaceAnOrderWhenRequestIsValid</td>
+<td>0.021s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldThrowExceptionPlacingOrderWithBadProductId</td>
+<td>0.071s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldThrowExceptionPlacingOrderWithLineItemsWithBadAmount</td>
+<td>0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldThrowExceptionPlacingOrderWithNoDestination</td>
+<td>0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldThrowExceptionPlacingOrderWithNoLineItems</td>
+<td>0.004s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>22:12:12.169 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class avenuecode.service.OrderServiceTests]
+22:12:12.179 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+22:12:12.195 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+22:12:12.221 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [avenuecode.service.OrderServiceTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+22:12:12.244 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [avenuecode.service.OrderServiceTests], using SpringBootContextLoader
+22:12:12.249 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [avenuecode.service.OrderServiceTests]: class path resource [avenuecode/service/OrderServiceTests-context.xml] does not exist
+22:12:12.250 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [avenuecode.service.OrderServiceTests]: class path resource [avenuecode/service/OrderServiceTestsContext.groovy] does not exist
+22:12:12.250 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [avenuecode.service.OrderServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+22:12:12.251 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [avenuecode.service.OrderServiceTests]: OrderServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:12:12.324 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [avenuecode.service.OrderServiceTests]
+22:12:12.336 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+22:12:12.336 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+22:12:12.337 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+22:12:12.356 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [avenuecode/service/] to resources [URL [file:/Users/ericheitmuller/Documents/AvenueCode/build/classes/test/avenuecode/service/], URL [file:/Users/ericheitmuller/Documents/AvenueCode/build/classes/main/avenuecode/service/]]
+22:12:12.359 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/Users/ericheitmuller/Documents/AvenueCode/build/classes/test/avenuecode/service]
+22:12:12.360 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/Users/ericheitmuller/Documents/AvenueCode/build/classes/test/avenuecode/service] for files matching pattern [/Users/ericheitmuller/Documents/AvenueCode/build/classes/test/avenuecode/service/*.class]
+22:12:12.366 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/Users/ericheitmuller/Documents/AvenueCode/build/classes/main/avenuecode/service]
+22:12:12.366 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/Users/ericheitmuller/Documents/AvenueCode/build/classes/main/avenuecode/service] for files matching pattern [/Users/ericheitmuller/Documents/AvenueCode/build/classes/main/avenuecode/service/*.class]
+22:12:12.368 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:avenuecode/service/*.class] to resources [file [/Users/ericheitmuller/Documents/AvenueCode/build/classes/test/avenuecode/service/OrderServiceTests.class], file [/Users/ericheitmuller/Documents/AvenueCode/build/classes/main/avenuecode/service/OrdersService.class]]
+22:12:12.388 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [avenuecode/] to resources [URL [file:/Users/ericheitmuller/Documents/AvenueCode/build/classes/test/avenuecode/], URL [file:/Users/ericheitmuller/Documents/AvenueCode/build/classes/main/avenuecode/]]
+22:12:12.388 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/Users/ericheitmuller/Documents/AvenueCode/build/classes/test/avenuecode]
+22:12:12.388 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/Users/ericheitmuller/Documents/AvenueCode/build/classes/test/avenuecode] for files matching pattern [/Users/ericheitmuller/Documents/AvenueCode/build/classes/test/avenuecode/*.class]
+22:12:12.389 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/Users/ericheitmuller/Documents/AvenueCode/build/classes/main/avenuecode]
+22:12:12.390 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/Users/ericheitmuller/Documents/AvenueCode/build/classes/main/avenuecode] for files matching pattern [/Users/ericheitmuller/Documents/AvenueCode/build/classes/main/avenuecode/*.class]
+22:12:12.392 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:avenuecode/*.class] to resources [file [/Users/ericheitmuller/Documents/AvenueCode/build/classes/main/avenuecode/Application.class]]
+22:12:12.432 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/ericheitmuller/Documents/AvenueCode/build/classes/main/avenuecode/Application.class]
+22:12:12.434 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration avenuecode.Application for test class avenuecode.service.OrderServiceTests
+22:12:12.438 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [avenuecode.service.OrderServiceTests]: using defaults.
+22:12:12.445 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+22:12:12.475 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@36687550, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3b10ad1e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@747676bd, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5d26bf57, org.springframework.test.context.transaction.TransactionalTestExecutionListener@28919356, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1657a307, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5153fcee, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@39673d94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1d4812cd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@36acc5f8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7856eb4f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@78dde24c]
+22:12:12.480 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [avenuecode.service.OrderServiceTests]
+22:12:12.481 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [avenuecode.service.OrderServiceTests]
+22:12:12.482 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [avenuecode.service.OrderServiceTests]
+22:12:12.482 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [avenuecode.service.OrderServiceTests]
+22:12:12.488 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@736d441d testClass = OrderServiceTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@46c23271 testClass = OrderServiceTests, locations = '{}', classes = '{class avenuecode.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@bef5c80, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@17af0ca3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d7c88cc], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+22:12:12.489 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [avenuecode.service.OrderServiceTests]
+22:12:12.489 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [avenuecode.service.OrderServiceTests]
+22:12:12.492 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@736d441d testClass = OrderServiceTests, testInstance = avenuecode.service.OrderServiceTests@23d7059, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@46c23271 testClass = OrderServiceTests, locations = '{}', classes = '{class avenuecode.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@bef5c80, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@17af0ca3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d7c88cc], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]].
+22:12:12.592 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+22:12:12.594 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+22:12:12.595 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+22:12:12.598 [Test worker] DEBUG org.springframework.core.env.MutablePropertySources - Adding [inline] PropertySource with highest search precedence
+22:12:12.611 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+22:12:12.612 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.3.RELEASE)
+
+2017-06-19 22:12:23.066  INFO 24877 --- [    Test worker] avenuecode.service.OrderServiceTests     : Starting OrderServiceTests on Erics-MacBook-Air.local with PID 24877 (started by ericheitmuller in /Users/ericheitmuller/Documents/AvenueCode)
+2017-06-19 22:12:23.068  INFO 24877 --- [    Test worker] avenuecode.service.OrderServiceTests     : No active profile set, falling back to default profiles: default
+2017-06-19 22:12:23.102  INFO 24877 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@77ff5e51: startup date [Mon Jun 19 22:12:23 PDT 2017]; root of context hierarchy
+2017-06-19 22:12:23.808  INFO 24877 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]]
+2017-06-19 22:12:25.652  INFO 24877 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-06-19 22:12:25.702  INFO 24877 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-19 22:12:25.813  INFO 24877 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-06-19 22:12:25.816  INFO 24877 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-06-19 22:12:25.818  INFO 24877 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-06-19 22:12:25.885  INFO 24877 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-19 22:12:26.060  INFO 24877 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-06-19 22:12:27.030  INFO 24877 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+Hibernate: drop table order_line_items if exists
+Hibernate: drop table orders if exists
+Hibernate: drop table products if exists
+Hibernate: create table order_line_items (id integer generated by default as identity, destination integer not null, order_id integer, product_id integer, primary key (id))
+Hibernate: create table orders (id integer generated by default as identity, destination varchar(100) not null, primary key (id))
+Hibernate: create table products (id integer generated by default as identity, name varchar(100) not null, price double not null, primary key (id))
+Hibernate: alter table order_line_items add constraint FKdjnh2emxm9tt6mrpfabdvbs0c foreign key (order_id) references orders
+Hibernate: alter table order_line_items add constraint FKpogrqnaru5vyemp3e9c997ag3 foreign key (product_id) references products
+2017-06-19 22:12:27.086  INFO 24877 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2017-06-19 22:12:27.143  INFO 24877 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: insert into products (id, name, price) values (null, ?, ?)
+Hibernate: insert into products (id, name, price) values (null, ?, ?)
+2017-06-19 22:12:28.312  INFO 24877 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+Hibernate: select product0_.id as id1_2_, product0_.name as name2_2_, product0_.price as price3_2_ from products product0_
+2017-06-19 22:12:28.488  INFO 24877 --- [    Test worker] avenuecode.Application                   : Product1 1
+2017-06-19 22:12:28.488  INFO 24877 --- [    Test worker] avenuecode.Application                   : Product2 2
+Hibernate: insert into orders (id, destination) values (null, ?)
+Hibernate: insert into order_line_items (id, destination, order_id, product_id) values (null, ?, ?, ?)
+Hibernate: insert into order_line_items (id, destination, order_id, product_id) values (null, ?, ?, ?)
+2017-06-19 22:12:28.531  INFO 24877 --- [    Test worker] avenuecode.service.OrderServiceTests     : Started OrderServiceTests in 15.914 seconds (JVM running for 17.361)
+Hibernate: select product0_.id as id1_2_0_, product0_.name as name2_2_0_, product0_.price as price3_2_0_ from products product0_ where product0_.id=?
+Hibernate: select product0_.id as id1_2_0_, product0_.name as name2_2_0_, product0_.price as price3_2_0_ from products product0_ where product0_.id=?
+Hibernate: insert into orders (id, destination) values (null, ?)
+Hibernate: insert into order_line_items (id, destination, order_id, product_id) values (null, ?, ?, ?)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 3.4</a> at Jun 19, 2017 10:12:47 PM</p>
+</div>
+</div>
+</body>
+</html>

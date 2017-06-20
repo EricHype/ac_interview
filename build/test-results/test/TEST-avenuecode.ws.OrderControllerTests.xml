@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="avenuecode.ws.OrderControllerTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-06-20T05:12:41" hostname="Erics-MacBook-Air.local" time="0.045">
+  <properties/>
+  <testcase name="shouldPlaceOrderWhenRequestIsValid" classname="avenuecode.ws.OrderControllerTests" time="0.012"/>
+  <testcase name="shouldGetOrderWhenIdIsValid" classname="avenuecode.ws.OrderControllerTests" time="0.013"/>
+  <testcase name="shouldGetAllOrders" classname="avenuecode.ws.OrderControllerTests" time="0.016"/>
+  <system-out><![CDATA[2017-06-19 22:12:28.659  INFO 24877 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [avenuecode.ws.OrderControllerTests], using SpringBootContextLoader
+2017-06-19 22:12:28.661  INFO 24877 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [avenuecode.ws.OrderControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-06-19 22:12:28.661  INFO 24877 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [avenuecode.ws.OrderControllerTests]: OrderControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-06-19 22:12:28.679  INFO 24877 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration avenuecode.Application for test class avenuecode.ws.OrderControllerTests
+2017-06-19 22:12:28.685  INFO 24877 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-06-19 22:12:28.690  INFO 24877 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4d08ffde, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6bc08755, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3cc2a423, org.springframework.test.context.support.DirtiesContextTestExecutionListener@71a49df7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7b586a12, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@14cdb003, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3d87ed05, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@68999467, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@50297b9c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@291d9432, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2b70bbd1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@f6e3874]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.3.RELEASE)
+
+2017-06-19 22:12:38.792  INFO 24877 --- [    Test worker] avenuecode.ws.OrderControllerTests       : Starting OrderControllerTests on Erics-MacBook-Air.local with PID 24877 (started by ericheitmuller in /Users/ericheitmuller/Documents/AvenueCode)
+2017-06-19 22:12:38.793  INFO 24877 --- [    Test worker] avenuecode.ws.OrderControllerTests       : No active profile set, falling back to default profiles: default
+2017-06-19 22:12:38.801  INFO 24877 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1baf2fb6: startup date [Mon Jun 19 22:12:38 PDT 2017]; root of context hierarchy
+2017-06-19 22:12:39.289  INFO 24877 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]]
+2017-06-19 22:12:40.042  INFO 24877 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-06-19 22:12:40.044  INFO 24877 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-19 22:12:40.055  INFO 24877 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-06-19 22:12:40.108  INFO 24877 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+Hibernate: drop table order_line_items if exists
+Hibernate: drop table orders if exists
+Hibernate: drop table products if exists
+Hibernate: create table order_line_items (id integer generated by default as identity, destination integer not null, order_id integer, product_id integer, primary key (id))
+Hibernate: create table orders (id integer generated by default as identity, destination varchar(100) not null, primary key (id))
+Hibernate: create table products (id integer generated by default as identity, name varchar(100) not null, price double not null, primary key (id))
+Hibernate: alter table order_line_items add constraint FKdjnh2emxm9tt6mrpfabdvbs0c foreign key (order_id) references orders
+Hibernate: alter table order_line_items add constraint FKpogrqnaru5vyemp3e9c997ag3 foreign key (product_id) references products
+2017-06-19 22:12:40.141  INFO 24877 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2017-06-19 22:12:40.145  WARN 24877 --- [    Test worker] o.h.j.i.EntityManagerFactoryRegistry     : HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2017-06-19 22:12:40.145  INFO 24877 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-06-19 22:12:40.943  INFO 24877 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1baf2fb6: startup date [Mon Jun 19 22:12:38 PDT 2017]; root of context hierarchy
+2017-06-19 22:12:41.103  INFO 24877 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/greeting]}" onto public avenuecode.hello.Greeting avenuecode.hello.GreetingController.greeting(java.lang.String)
+2017-06-19 22:12:41.109  INFO 24877 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/order/{id}],methods=[GET]}" onto public avenuecode.model.Order avenuecode.ws.OrderController.getOrder(java.lang.Integer)
+2017-06-19 22:12:41.112  INFO 24877 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/order],methods=[POST],consumes=[application/json]}" onto public avenuecode.model.Order avenuecode.ws.OrderController.createOrder(avenuecode.request.PlaceOrderRequest)
+2017-06-19 22:12:41.113  INFO 24877 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/order/{id}],methods=[PUT]}" onto public avenuecode.model.Order avenuecode.ws.OrderController.updateOrder(avenuecode.model.Order)
+2017-06-19 22:12:41.113  INFO 24877 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders],methods=[GET]}" onto public java.util.List<avenuecode.model.Order> avenuecode.ws.OrderController.getAllOrders()
+2017-06-19 22:12:41.115  INFO 24877 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/product/{id}]}" onto public avenuecode.model.Product avenuecode.ws.ProductController.getProduct(java.lang.Integer)
+2017-06-19 22:12:41.116  INFO 24877 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/products]}" onto public java.util.List<avenuecode.model.Product> avenuecode.ws.ProductController.getAllProducts()
+2017-06-19 22:12:41.119  INFO 24877 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-19 22:12:41.120  INFO 24877 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-19 22:12:41.172  INFO 24877 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-19 22:12:41.173  INFO 24877 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-19 22:12:41.234  INFO 24877 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Hibernate: insert into products (id, name, price) values (null, ?, ?)
+Hibernate: insert into products (id, name, price) values (null, ?, ?)
+2017-06-19 22:12:41.619  INFO 24877 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+Hibernate: select product0_.id as id1_2_, product0_.name as name2_2_, product0_.price as price3_2_ from products product0_
+2017-06-19 22:12:41.625  INFO 24877 --- [    Test worker] avenuecode.Application                   : Product1 1
+2017-06-19 22:12:41.625  INFO 24877 --- [    Test worker] avenuecode.Application                   : Product2 2
+Hibernate: insert into orders (id, destination) values (null, ?)
+Hibernate: insert into order_line_items (id, destination, order_id, product_id) values (null, ?, ?, ?)
+Hibernate: insert into order_line_items (id, destination, order_id, product_id) values (null, ?, ?, ?)
+2017-06-19 22:12:41.638  INFO 24877 --- [    Test worker] avenuecode.ws.OrderControllerTests       : Started OrderControllerTests in 12.923 seconds (JVM running for 30.469)
+Hibernate: select product0_.id as id1_2_0_, product0_.name as name2_2_0_, product0_.price as price3_2_0_ from products product0_ where product0_.id=?
+Hibernate: insert into orders (id, destination) values (null, ?)
+Hibernate: insert into order_line_items (id, destination, order_id, product_id) values (null, ?, ?, ?)
+Hibernate: select order0_.id as id1_1_0_, order0_.destination as destinat2_1_0_ from orders order0_ where order0_.id=?
+Hibernate: select order0_.id as id1_1_, order0_.destination as destinat2_1_ from orders order0_
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
