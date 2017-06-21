@@ -7,6 +7,9 @@ A simple REST API that offers a bit of CRUD using spring boot with an H2 backend
 To build:
 >gradle build
 
+To run tests:
+>gradle test
+
 To run:
 >gradle bootRun
 
