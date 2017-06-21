@@ -6,13 +6,12 @@ import avenuecode.request.PlaceOrderRequest;
 import avenuecode.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 /**
@@ -33,28 +32,32 @@ public class OrderController {
     @Autowired
     OrderRepository orderRepository;
 
-    @RequestMapping(value = "/order", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/order", method = RequestMethod.POST,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody Order createOrder(@RequestBody PlaceOrderRequest orderRequest){
         Order o = ordersService.placeOrder(orderRequest);
         return o;
     }
 
     @RequestMapping(value="/order/{id}", method = RequestMethod.GET)
-    public @ResponseBody Order getOrder(@PathParam("id") Integer id){
+    public @ResponseBody Order getOrder(@PathVariable("id") int id){
         Order o = orderRepository.findOne(id);
         return o;
     }
 
-    @RequestMapping(value="/order/{id}", method = RequestMethod.PUT)
-    public @ResponseBody Order updateOrder(@RequestBody Order order){
-        Order o = orderRepository.findOne(order.getId());
+    @RequestMapping(value="/order/{id}", method = RequestMethod.PUT,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody Order updateOrder(@PathVariable("id") int id,
+                                           @RequestBody PlaceOrderRequest orderRequest){
+        Order o = orderRepository.findOne(id);
 
         if(null == o){
-            throw new IllegalArgumentException("order id " + order.getId() + " not found");
+            throw new IllegalArgumentException("order id " + id + " not found");
         }
 
-        o.setDestination(order.getDestination());
-        o.setOrderLineItems(order.getOrderLineItems());
+        o.setDestination(orderRequest.getDestination());
+        o.setOrderLineItems(ordersService.getOrderLineItemsFromRequest(
+                orderRequest.getLineItems(), o));
 
         return orderRepository.save(o);
     }

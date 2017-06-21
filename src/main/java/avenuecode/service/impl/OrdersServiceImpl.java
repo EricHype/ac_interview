@@ -11,6 +11,9 @@ import avenuecode.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by eheitmuller on 6/18/17.
  */
@@ -37,7 +40,15 @@ public class OrdersServiceImpl implements OrdersService {
             throw new IllegalArgumentException("order requires at least 1 line item");
         }
 
-        for (OrderLineItemRequest lineItem: request.getLineItems()) {
+        order.setOrderLineItems(getOrderLineItemsFromRequest(request.getLineItems(), order));
+
+        return orderRepository.save(order);
+    }
+
+    public List<OrderLineItem> getOrderLineItemsFromRequest(List<OrderLineItemRequest> requests,
+                                                            Order order){
+        List<OrderLineItem> retVal = new ArrayList<>();
+        for (OrderLineItemRequest lineItem: requests) {
 
             if(lineItem.getAmount() < 1){
                 throw new IllegalArgumentException("line items must contain an amount greater than 0");
@@ -49,9 +60,9 @@ public class OrdersServiceImpl implements OrdersService {
                 throw new IllegalArgumentException(lineItem.getProductId() + " is not a valid product id");
             }
 
-            order.getOrderLineItems().add(new OrderLineItem(p, lineItem.getAmount(), order));
+            retVal.add(new OrderLineItem(p, lineItem.getAmount(), order));
         }
 
-        return orderRepository.save(order);
+        return retVal;
     }
 }
